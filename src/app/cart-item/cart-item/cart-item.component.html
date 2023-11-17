@@ -14,17 +14,20 @@
             <th class="text-right py-3 px-4" style="width: 100px;">Price</th>
             <th class="text-center py-3 px-4" style="width: 120px;">Quantity</th>
             <th class="text-right py-3 px-4" style="width: 100px;">Total</th>
-            <th class="text-center align-middle py-3 px-0" style="width: 40px;"><a href="#" class="shop-tooltip float-none text-light" title="" data-original-title="Clear cart"><i class="ino ion-md-trash"></i></a></th>
+            <th class="text-center align-middle py-3 px-0" style="width: 40px;"><a class="shop-tooltip float-none text-light"
+                                                                                   data-original-title="Clear cart"
+                                                                                   href="#"
+                                                                                   title=""><i
+              class="ino ion-md-trash"></i></a></th>
           </tr>
           </thead>
           <tbody>
-<!--          <div *ngFor="let item of items">-->
           <tr *ngFor="let item of items">
             <td class="p-4">
               <div class="media align-items-center">
-                <img src="{{item.product.imageUrl}}" class="d-block ui-w-40 ui-bordered mr-4" alt="">
+                <img alt="" class="d-block ui-w-40 ui-bordered mr-4" src="{{item.product.imageUrl}}">
                 <div class="media-body">
-                  <a href="#" class="d-block text-dark">{{item.product.productName}}</a>
+                  <a class="d-block text-dark" href="#">{{item.product.productName}}</a>
                   <small>
                     <span class="text-muted">Description: </span> {{item.product.productDescription}}
                   </small>
@@ -32,17 +35,17 @@
               </div>
             </td>
             <td class="text-right font-weight-semibold align-middle p-4">${{item.product.price}}</td>
-            <td class="align-middle p-4"><input [(ngModel)]="item.quantity" type="text" class="form-control text-center" name="key" #key (change)="updateItem(item.itemId, key.value)" ></td>
+            <td class="align-middle p-4"><input #key (change)="updateItem(item.itemId, key.value)" [(ngModel)]="item.quantity"
+                                                class="form-control text-center" name="key" type="text"></td>
             <td class="text-right font-weight-semibold align-middle p-4">${{item.itemTotal}}</td>
-            <td class="text-center align-middle px-0"><a (click)="deleteItem(item)" class="shop-tooltip close float-none text-danger" title="" data-original-title="Remove">×</a></td>
+            <td class="text-center align-middle px-0"><a (click)="deleteItem(item)"
+                                                         class="shop-tooltip close float-none text-danger" data-original-title="Remove"
+                                                         title="">×</a></td>
           </tr>
-<!--          </div>-->
           </tbody>
         </table>
       </div>
       <!-- / Shopping cart table -->
-<!--<input [(ngModel="item.quantity" type="text" class="form-control text-center" id="quantityT" (change)=""updateItem(item.itemId, key.value)" >
-     <input type="text" (ngModelChange)="updateItem(item.itemId, key.value)" #key="ngModel" ngModel name="key" class="form-control text-center" [value]=item.quantity>-->
       <div class="d-flex flex-wrap justify-content-between align-items-center pb-4">
 
         <div class="d-flex">
@@ -54,8 +57,10 @@
       </div>
 
       <div class="float-right">
-        <button type="button" routerLink="/product/product-list" class="btn btn-lg btn-default md-btn-flat mt-2 mr-3">Back to shopping</button>
-        <button type="button" class="btn btn-lg btn-primary mt-2">Checkout</button>
+        <button class="btn btn-lg btn-default md-btn-flat mt-2 mr-3" routerLink="/product/product-list" type="button">
+          Back to shopping
+        </button>
+        <button class="btn btn-lg btn-primary mt-2" type="button">Checkout</button>
       </div>
 
     </div>

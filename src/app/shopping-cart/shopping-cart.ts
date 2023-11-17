@@ -1,3 +1,3 @@
-export interface ShoppingCart{
+export interface ShoppingCart {
   cartId: number;
 }

@@ -1,17 +1,15 @@
-@import 'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css';
-@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css';
-
-body{
-  margin-top:20px;
-  background:#eee;
+body {
+  margin-top: 20px;
+  background: #eee;
 }
+
 .ui-w-40 {
   width: 40px !important;
   height: auto;
 }
 
-.card{
-  box-shadow: 0 1px 15px 1px rgba(52,40,104,.08);
+.card {
+  box-shadow: 0 1px 15px 1px rgba(52, 40, 104, .08);
 }
 
 .ui-product-color {
@@ -21,7 +19,7 @@ body{
   width: .875rem;
   height: .875rem;
   border-radius: 10rem;
-  -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,0.15) inset;
-  box-shadow: 0 0 0 1px rgba(0,0,0,0.15) inset;
+  -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset;
   vertical-align: middle;
 }
