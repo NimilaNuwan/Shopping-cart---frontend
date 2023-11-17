@@ -1,16 +1,15 @@
 <form class="col-md-3 mx-2">
-  <input type="search"  name="key" id="searchName" class="form-control mr-sm-2" placeholder="Search products..." required>
+  <input type="search" (ngModelChange)="searchProducts(key.value)" #key="ngModel" ngModel name="key" id="searchName" class="form-control mr-sm-2" placeholder="Search products..." required>
 </form>
 
 <div class="container">
-  <div *ngFor="let e of products">
-  <div class="col-xs-6 col-md-6 bootstrap snippets bootdeys">
+  <div *ngFor="let e of products" class="col-xs-6 col-md-6 bootstrap snippets bootdeys">
     <!-- product -->
     <div class="product-content product-wrap clearfix">
       <div class="row">
         <div class="col-md-5 col-sm-12 col-xs-12">
           <div class="product-image">
-            <img src="https://www.bootdey.com/image/194x228/87CEFA" alt="194x228" class="img-responsive">
+            <img src="{{e.imageUrl}}" alt="194x228" class="img-responsive">
           </div>
         </div>
         <div class="col-md-7 col-sm-12 col-xs-12">
@@ -26,12 +25,12 @@
             <span class="tag1"></span>
           </div>
           <div class="description">
-            <p>{{e.productDescription}} </p>
+            <p>{{e.productDescription}} <br>Remaining: {{e.quantity}}</p>
           </div>
           <div class="product-info smart-form">
             <div class="row">
               <div class="col-md-6 col-sm-6 col-xs-6">
-                <a href="#" class="btn btn-success">Add to cart</a>
+                <a (click)="addToCart(e.productId)" class="btn btn-success">Add to cart</a>
               </div>
             </div>
           </div>
@@ -40,7 +39,5 @@
     </div>
     <!-- end product -->
   </div>
-  </div>
 </div>
-
 

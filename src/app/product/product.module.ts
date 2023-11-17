@@ -5,6 +5,7 @@ import { ProductRoutingModule } from './product-routing.module';
 import { ProductListComponent } from './product-list/product-list.component';
 import {BrowserModule} from "@angular/platform-browser";
 import {ProductService} from "../service/product.service";
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -13,8 +14,8 @@ import {ProductService} from "../service/product.service";
   ],
   imports: [
     CommonModule,
-    BrowserModule,
-    ProductRoutingModule
+    ProductRoutingModule,
+    FormsModule
   ],
   exports: [
     ProductListComponent

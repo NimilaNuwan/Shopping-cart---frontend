@@ -14,9 +14,9 @@ import {CartItemModule} from "./cart-item/cart-item.module";
     imports: [
         BrowserModule,
         AppRoutingModule,
-        ProductModule,
         HttpClientModule,
-        CartItemModule
+      ProductModule,
+      CartItemModule
     ],
   providers: [],
   bootstrap: [AppComponent]
